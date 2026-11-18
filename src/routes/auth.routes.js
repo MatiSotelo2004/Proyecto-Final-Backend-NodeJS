@@ -1,7 +1,8 @@
-import express from "express"
+import express from 'express'
+import { login } from '../utils/token-generator.js'
 
 const router = express.Router()
 
-router.post("/login", (req, res) => {
-  res.send("Este es el endpoint para loguearte")
-})
+router.post('/login', login)
+
+export default router
